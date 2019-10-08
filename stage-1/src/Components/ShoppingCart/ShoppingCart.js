@@ -3,6 +3,7 @@ import "./ShoppingCart.css";
 
 class ShoppingCart extends Component {
   render() {
+    console.log(this.props.cart)
     let shoppingCartDisplay = this.props.cart.map((element, index) => {
       return (
         <div className="shopping-cart-product-container" key={index}>
@@ -25,7 +26,7 @@ class ShoppingCart extends Component {
     return (
       <div className="shopping-cart-container">
         {shoppingCartDisplay[0] ? (
-          {shoppingCartDisplay}
+          shoppingCartDisplay
         ) : (
           <div className="go-buy-something">
             <h1>Your shopping cart is empty! Go buy something!</h1>
